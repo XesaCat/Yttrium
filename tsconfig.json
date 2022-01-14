@@ -1,0 +1,14 @@
+{
+    "extends": "@sapphire/ts-config",
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist",
+        "composite": false,
+        "incremental": false,
+        "declarationMap": false,
+        "declaration": false,
+        // "tsBuildInfoFile": "dist/.tsbuildinfo",
+        "typeRoots": ["types", "node_modules/@types"]
+    },
+    "include": ["src"]
+}

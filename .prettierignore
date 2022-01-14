@@ -1,0 +1,6 @@
+.pnp.*
+
+.yarn/
+dist/
+logs/
+node_modules/

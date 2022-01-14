@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "yzhang.markdown-all-in-one",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "arcanis.vscode-zipfs",
+        "aaron-bond.better-comments",
+        "pflannery.vscode-versionlens"
+    ]
+}

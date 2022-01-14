@@ -1,0 +1,7 @@
+.pnp.*
+
+.vscode
+.yarn/
+dist/
+logs/
+node_modules/
