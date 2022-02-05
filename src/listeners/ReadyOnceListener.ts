@@ -48,7 +48,7 @@ export class ReadyOnceListener extends Listener {
             logger.silly("Setting setPresence interval");
             const activities = [
                 "Alone.",
-                "with their imaginary frineds",
+                "with their imaginary friends",
                 "with nobody",
                 "with knifes",
                 `on ${this.container.client.guilds.cache.size} servers`,

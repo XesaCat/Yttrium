@@ -91,7 +91,7 @@ export function initConfig(): void {
                 "# SOME_VARIABLE=some-value",
                 "",
                 "# Default prefix",
-                "# description: The prefix of the bot listens to if not overritten by guild prefix",
+                "# description: The prefix of the bot listens to if not overwritten by guild prefix",
                 "# required   : fatal",
                 "# default    : Y!",
                 "# options    : <string>",
@@ -120,7 +120,7 @@ export function initConfig(): void {
                 "LOGLEVEL=info",
                 "",
                 "# Owner IDs",
-                "# description: The ID(s) of the owner(s), seperated by comma. e.g. 1234,5678,9876",
+                "# description: The ID(s) of the owner(s), separated by comma. e.g. 1234,5678,9876",
                 "# required   : fatal",
                 "# default    : <none>",
                 "# options    : <discord user id(s)>",
@@ -168,7 +168,7 @@ export function initConfig(): void {
         config({ path: "config/production.env" });
         checkConfig("production.env");
     } else {
-        earlyLogger.fatal("Faild to load config/production.env");
+        earlyLogger.fatal("Failed to load config/production.env");
         process.exit(1);
     }
 

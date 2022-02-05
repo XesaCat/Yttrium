@@ -54,9 +54,9 @@ export class Logger extends TsLog {
                     : JSON.stringify(logObject.argumentsArray[0], null, 4)
             }\n${error ? `  ${error.name}  ${error.message}\n` : ""}`,
         );
-        if (error) Logger.logStackToTranport(error.stack, error.codeFrame, true);
+        if (error) Logger.logStackToTransport(error.stack, error.codeFrame, true);
 
-        if (logObject.stack) Logger.logStackToTranport(logObject.stack);
+        if (logObject.stack) Logger.logStackToTransport(logObject.stack);
 
         if (!existsSync(Logger.jsonFile)) writeFileSync(Logger.jsonFile, "[]");
         const object = JSON.parse(String(readFileSync(Logger.jsonFile)));
@@ -64,7 +64,7 @@ export class Logger extends TsLog {
         writeFileSync(Logger.jsonFile, `${JSON.stringify(object, null, 4)}\n`);
     }
 
-    private static logStackToTranport(stack: IStackFrame[], codeFrame?: ICodeFrame, isError?: boolean): void {
+    private static logStackToTransport(stack: IStackFrame[], codeFrame?: ICodeFrame, isError?: boolean): void {
         const stacks: string[] = [];
         stack.forEach((trace) =>
             stacks.push(

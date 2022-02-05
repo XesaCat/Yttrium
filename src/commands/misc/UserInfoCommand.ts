@@ -18,7 +18,7 @@ export default class UserinfoCommand extends Command {
             aliases: ["i", "info"],
             cooldownDelay: 1000,
             cooldownFilteredUsers: process.env.OWNER_IDS?.split(","),
-            description: "displays informations about a user",
+            description: "displays information about a user",
             name: "userinfo",
         });
     }

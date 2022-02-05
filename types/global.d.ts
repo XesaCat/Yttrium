@@ -6,7 +6,7 @@ declare namespace NodeJS {
         LOGLEVEL: TLogLevelName;
         OWNER_IDS: string;
         SETPRESENCE: boolean;
-        SETPRECENSE_INTERVAL: number;
+        SETPRESENCE_INTERVAL: number;
         TOPGG_TOKEN: string;
     }
 }

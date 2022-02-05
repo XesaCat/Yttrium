@@ -19,7 +19,7 @@ process.on("uncaughtException", function (e) {
 
 process.on("SIGINT", function () {
     process.stdout.write("\b\b");
-    logger.info("Recived SIGINT, shutting down");
+    logger.info("Received SIGINT, shutting down");
     process.exit();
 });
 
