@@ -5,6 +5,7 @@
         "dbaeumer.vscode-eslint",
         "arcanis.vscode-zipfs",
         "aaron-bond.better-comments",
-        "pflannery.vscode-versionlens"
+        "pflannery.vscode-versionlens",
+        "mikestead.dotenv"
     ]
 }
