@@ -24,7 +24,7 @@
         "clean:build": "rm dist/ -rf",
         "clean:logs": "rm logs/ -rf",
         "docker:build": "sudo docker build . -t registry.xesacat.xyz/yttrium",
-        "docker:run": "sudo docker run --rm -v $PWD/config:/opt/app/config:ro registry.xesacat.xyz/yttrium",
+        "docker:run": "sudo docker run --rm -v $PWD/config:/opt/app/config registry.xesacat.xyz/yttrium",
         "format": "prettier -c . --write",
         "lint": "eslint . --fix",
         "postinstall": "skip-postinstall || husky install",
