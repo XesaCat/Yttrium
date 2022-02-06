@@ -17,10 +17,19 @@ process.on("uncaughtException", function (e) {
     process.exit(1);
 });
 
+process.on("SIGQUIT", function () {
+    logger.info("Received SIGQUIT, shutting down");
+});
+
 process.on("SIGINT", function () {
     process.stdout.write("\b\b");
     logger.info("Received SIGINT, shutting down");
     process.exit();
+});
+
+process.on("SIGTERM", function () {
+    logger.info("Received SIGTERM, shutting down");
+    process.exit(129);
 });
 
 process.on("exit", function () {
