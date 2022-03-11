@@ -39,8 +39,9 @@ pids/
 node_modules/
 jspm_packages/
 
-# Optional npm cache directory
+# NPM
 .npm
+package-lock.json
 
 # Optional eslint cache
 .eslintcache
