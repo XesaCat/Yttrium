@@ -79,7 +79,7 @@ const config: ConfigEntry[] = [
 ];
 
 export function initConfig(): void {
-    const file = env.NODE_ENV ? `${env.NODE_ENV}.env` : "production.env";
+    const file = env.NODE_ENV ? `${env.NODE_ENV}.env` : "development.env";
     const fallback = env.NODE_ENV !== "production" ? "production.env" : undefined;
     const enver = new Enver({
         configEntries: config,
@@ -94,6 +94,7 @@ export function initConfig(): void {
 
     if (!existsSync(`config/${file}`) && !existsSync(`config/${fallback}`)) {
         enver.initConfig();
+        earlyLogger.info("Initialized config. Make sure to change before running again");
         exit();
     }
 
