@@ -579,12 +579,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xesacat/enver@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@xesacat/enver@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40xesacat%2Fenver%2F1.0.0%2F4d0c5a647127c307fe9da0ea4c78091e598f375a06ffe1e2f2e0b93e82435161"
+"@xesacat/enver@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@xesacat/enver@npm:1.1.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40xesacat%2Fenver%2F1.1.0%2Fbaea3f4bd55e618dd3fbb99169a9c188eb83d0b5de73811b18cc854c5500638f"
   dependencies:
     dotenv: ^16.0.0
-  checksum: 3fed7ec186e5bcc27dcd4d54e34aca447171bbb7ff5bf3798946280a49ffbf78c643e9ea74d8b6c38857aa127aa0765d8bfba4c2396cfb37735c58b0dd61b4ce
+  checksum: be0ffeed3cc08a3afbaf87f70fb643ca3d559791b4fda0265c5c52fe59b683cec5aff8aa28a1174175a9b21f62a50e96e6129eb78ec764b8e13b1f1b5b759212
   languageName: node
   linkType: hard
 
@@ -3699,7 +3699,7 @@ __metadata:
     "@types/node": ^17.0.16
     "@typescript-eslint/eslint-plugin": ^5.11.0
     "@typescript-eslint/parser": ^5.11.0
-    "@xesacat/enver": ^1.0.0
+    "@xesacat/enver": ^1.1.0
     chokidar: ^3.5.3
     discord-api-types: ^0.28.0
     discord.js: ^13.6.0
