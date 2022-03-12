@@ -32,8 +32,10 @@
         "watch": "tsc --watch"
     },
     "lint-staged": {
+        "*": [
+            "yarn format"
+        ],
         "*.{js,ts}": [
-            "yarn format",
             "yarn lint"
         ]
     },
