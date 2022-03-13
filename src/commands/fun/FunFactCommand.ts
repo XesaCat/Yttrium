@@ -29,7 +29,7 @@ export default class FunFactCommand extends Command {
         logger.debug(`Unloaded command '${this.category ? `${this.category}/` : ""}${this.name}'`);
     }
 
-    public messageRun(message: Message): void {
+    public override messageRun(message: Message): void {
         const chosenFact = Math.floor(Math.random() * (this.facts.length - 1) + 1);
         const embed = new MessageEmbed({
             color: "YELLOW",

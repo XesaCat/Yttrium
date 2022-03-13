@@ -17,15 +17,15 @@ export default class StatusCommand extends Command {
         });
     }
 
-    public onLoad(): void {
+    public override onLoad(): void {
         logger.debug(`Loaded command '${this.category ? `${this.category}/` : ""}${this.name}'`);
     }
 
-    public onUnload(): void {
+    public override onUnload(): void {
         logger.debug(`Unloaded command '${this.category ? `${this.category}/` : ""}${this.name}'`);
     }
 
-    public messageRun(message: Message): void {
+    public override messageRun(message: Message): void {
         logger.silly(
             `Command '${this.category ? `${this.category}/` : ""}${this.name}' triggered by ${message.author.tag} (${
                 message.author.id

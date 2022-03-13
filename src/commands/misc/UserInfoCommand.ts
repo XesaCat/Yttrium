@@ -23,15 +23,15 @@ export default class UserinfoCommand extends Command {
         });
     }
 
-    public onLoad(): void {
+    public override onLoad(): void {
         logger.debug(`Loaded command '${this.category ? `${this.category}/` : ""}${this.name}'`);
     }
 
-    public onUnload(): void {
+    public override onUnload(): void {
         logger.debug(`Unloaded command '${this.category ? `${this.category}/` : ""}${this.name}'`);
     }
 
-    public async messageRun(message: Message): Promise<void> {
+    public override async messageRun(message: Message): Promise<void> {
         logger.silly(
             `Command '${this.category ? `${this.category}/` : ""}${this.name}' triggered by ${message.author.tag} (${
                 message.author.id
@@ -43,7 +43,9 @@ export default class UserinfoCommand extends Command {
             .fetch(`${message.mentions.users.first()?.id}`, { force: true })
             .catch(() => undefined);
         if (!user) user = await this.container.client.users.fetch(args[0], { force: true }).catch(() => undefined);
-        if (!args[0]) user = await this.container.client.users.fetch(message.author.id, { force: true });
+        if (message.mentions.repliedUser)
+            user = await this.container.client.users.fetch(message.mentions.repliedUser, { force: true });
+        else if (!args[0]) user = await this.container.client.users.fetch(message.author.id, { force: true });
 
         const embed = new MessageEmbed({
             color: "AQUA",

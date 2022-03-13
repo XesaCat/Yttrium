@@ -28,17 +28,17 @@ export class ReadyOnceListener extends Listener {
         });
     }
 
-    public onLoad(): void {
+    public override onLoad(): void {
         logger.debug(`Loaded listener '${this.name}'`);
         super.onLoad();
     }
 
-    public onUnload(): void {
+    public override onUnload(): void {
         logger.debug(`Unloaded listener '${this.name}'`);
         super.onUnload();
     }
 
-    public run(client: Client): void {
+    public override run(client: Client): void {
         logger.silly(`Listener '${this.name}' triggered`);
 
         logger.info(`Logged in as ${client.user?.username} (${client.user?.id})`);
