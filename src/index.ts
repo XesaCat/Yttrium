@@ -19,6 +19,7 @@ process.on("uncaughtException", function (e) {
 
 process.on("SIGQUIT", function () {
     logger.info("Received SIGQUIT, shutting down");
+    process.exit();
 });
 
 process.on("SIGINT", function () {
