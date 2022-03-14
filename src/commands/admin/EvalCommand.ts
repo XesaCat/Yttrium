@@ -61,7 +61,7 @@ export default class EvalCommand extends Command {
             embed.addFields([
                 {
                     name: "Output",
-                    value: output.length <= 1024 ? output : "<output limit exceeded>",
+                    value: output.length <= 1024 ? output : "```<output limit exceeded>```",
                 },
                 { name: "Type", value: `\`\`\`ts\n${typeof (await x)}\n\`\`\`` },
             ]);
