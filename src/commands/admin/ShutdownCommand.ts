@@ -35,6 +35,7 @@ export default class ShutdownCommand extends Command {
         const embed = new MessageEmbed({
             color: "AQUA",
             description: `${this.container.client.user?.username} is shut down on request from ${message.author.tag}`,
+            timestamp: Date.now(),
             title: "Shutting down...",
         });
 
